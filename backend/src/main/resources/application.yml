@@ -1,0 +1,16 @@
+# backend/src/main/resources/application.yml
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1 # Optional: Set a context path for your API
+
+spring:
+  application:
+    name: backend # Set your application name
+  profiles:
+    active: dev
+# Logging configuration (example)
+#logging:
+#  level:
+#    root: INFO
+#    com.feed.aidetector: DEBUG # Set your application's package to DEBUG for more detailed logs

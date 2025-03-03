@@ -1,0 +1,18 @@
+# backend/src/main/resources/application-dev.yml
+server:
+  port: 8080 # Different port for development profile to avoid conflicts if running multiple instances
+
+  # spring:
+  #   profiles:
+  #     active: dev # Explicitly set the profile name (though already implied by filename)
+#  devtools:
+#    livereload:
+#      enabled: true # Enable Spring Boot DevTools livereload for automatic browser refresh during development
+#    restart:
+#      enabled: true # Enable automatic application restarts on code changes
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.boot: INFO

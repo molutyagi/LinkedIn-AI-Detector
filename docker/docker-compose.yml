@@ -1,0 +1,29 @@
+
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/backend.Dockerfile
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080 (Spring Boot default)
+    environment:
+      # Add any backend environment variables here
+      # Example: SPRING_PROFILES_ACTIVE: dev
+      SPRING_PROFILES_ACTIVE: dev
+    # depends_on:
+      # []
+    networks:
+      - spring-network
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/frontend.Dockerfile
+    ports:
+      - "80:80" # Map host port 80 to container port 80 (nginx default)
+    networks:
+      - spring-network
+
+networks:
+  spring-network:
+    driver: bridge
