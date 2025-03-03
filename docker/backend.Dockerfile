@@ -17,4 +17,4 @@ RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the jar file (ensure the jar name matches your build output)
-ENTRYPOINT ["java", "-jar", "target/your-backend-app.jar"]
+ENTRYPOINT ["java", "-jar", "target/com.feed.aidetector-0.0.1-SNAPSHOT.jar"]
